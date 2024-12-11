@@ -1,9 +1,10 @@
 import { IconStarFilled } from "@tabler/icons-react";
-import { actions } from "../../utility/constants/constants";
 import { IProduct } from "../../utility/model/product.model";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/slices/cart.slice";
 
 const SingleProduct = ({ product }: { product: IProduct }) => {
-  // const { dispatch } = useCart();
+  const dispatch  = useDispatch();
 
   return (
     <div className="group shadow-lg rounded-tl-sm">
@@ -46,6 +47,15 @@ const SingleProduct = ({ product }: { product: IProduct }) => {
           //     },
           //   })
           // }
+          onClick={() => dispatch(addToCart(
+            {
+                    id: product.id,
+                    title: product.title,
+                    price: product.price,
+                    minimumOrderQuantity: product.minimumOrderQuantity,
+                    thumbnail: product.thumbnail,
+                  }
+          ))}
         >
           Add To Cart
         </button>

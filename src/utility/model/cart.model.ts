@@ -7,6 +7,7 @@ export interface ICartItem {
   thumbnail: string;
   
 }
-export interface ICartState {
+export interface ICartSlice {
   cart: ICartItem[];
+  isCartOpen:boolean
 }
