@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <div className="container-box py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
         {isLoading ? (
           <div className="absolute right-1/2 bottom-1/2 transform translate-x-1/2 translate-y-1/2">
             <div className="p-2 bg-gradient-to-tr animate-spin from-green-500 to-blue-500 via-purple-500 rounded-full">
@@ -22,7 +22,8 @@ const Home = () => {
             <SingleProduct key={product?.id} product={product} />
           ))
         )}
-      </div>
+      </div> */}
+      <h3>Home</h3>
     </div>
   );
 };
